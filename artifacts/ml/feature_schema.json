@@ -1,0 +1,52 @@
+{
+  "node_features": [
+    "tick_progress",
+    "tier_norm",
+    "type_supplier",
+    "type_factory",
+    "type_warehouse",
+    "capacity_log1p",
+    "trust_score_prior",
+    "inventory_on_hand_log1p",
+    "inventory_incoming_log1p",
+    "inventory_reorder_point_log1p",
+    "inventory_demand_log1p",
+    "inventory_stockout_qty_log1p",
+    "physics_stockout_baseline_log1p",
+    "stockout_item_ratio",
+    "mean_on_hand_reorder_ratio",
+    "min_on_hand_reorder_ratio",
+    "mean_supply_cover_ratio",
+    "message_count_lookback_log1p",
+    "unverified_count_lookback_log1p",
+    "security_alert_count_lookback_log1p",
+    "disruption_count_lookback_log1p",
+    "verified_ratio_lookback",
+    "cumulative_unverified_log1p",
+    "cumulative_disruption_log1p",
+    "observed_security_flag"
+  ],
+  "edge_features": [
+    "lead_time_norm",
+    "unit_cost_log1p",
+    "throughput_log1p",
+    "reliability_score",
+    "component_criticality",
+    "message_count_lookback_log1p",
+    "unverified_count_lookback_log1p",
+    "security_alert_count_lookback_log1p",
+    "delayed_message_count_lookback_log1p",
+    "mean_delay_extra_norm",
+    "mean_qty_to_throughput",
+    "endpoint_disruption_count_lookback_log1p"
+  ],
+  "target_order": [
+    "risk_score",
+    "stockout_prob",
+    "predicted_stockout_qty"
+  ],
+  "edge_target": "edge_risk_score",
+  "forecast_horizon_ticks": 3,
+  "lookback_ticks": 3,
+  "security_feature_policy": "Dynamic message audit counts use only messages at or before the anchor tick. Static final is_compromised and metadata alert totals are excluded from historical inputs."
+}

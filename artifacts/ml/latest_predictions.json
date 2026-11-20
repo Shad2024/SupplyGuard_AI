@@ -1,0 +1,5040 @@
+{
+  "schema_version": "1.0.0",
+  "model_name": "SupplyGuard Temporal Edge-Aware GNN",
+  "model_backend_at_training": "native_torch_index_add_fallback",
+  "checkpoint_version": "1.0.0",
+  "generated_at_utc": "2026-11-19T21:26:20.512838+00:00",
+  "source_database_sha256": "ef4213e3ad99ed7e25654edb77b565db9506b86ae1de0d6823ded0f2c7b132c5",
+  "forecast_horizon_ticks": 3,
+  "lookback_ticks": 3,
+  "quantity_residual_scale": 0.1,
+  "source_counts": {
+    "nodes": 12,
+    "edges": 16,
+    "components": 5,
+    "inventory_snapshots": 1800,
+    "supply_messages": 497,
+    "ticks": 30
+  },
+  "coverage": {
+    "ticks": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+    ],
+    "node_prediction_records": 360,
+    "edge_prediction_records": 480,
+    "node_ids": [
+      "T0-ALLOY-01",
+      "T0-CELL-01",
+      "T0-GLASS-01",
+      "T0-SIL-01",
+      "T1-BATT-01",
+      "T1-CHSS-01",
+      "T1-DISP-01",
+      "T1-PCBA-01",
+      "FAC-LAP-01",
+      "FAC-LAP-02",
+      "WH-REG-01",
+      "WH-REG-02"
+    ],
+    "edge_ids": [
+      "E-0001",
+      "E-0002",
+      "E-0003",
+      "E-0004",
+      "E-0005",
+      "E-0006",
+      "E-0007",
+      "E-0008",
+      "E-0009",
+      "E-0010",
+      "E-0011",
+      "E-0012",
+      "E-0013",
+      "E-0014",
+      "E-0015",
+      "E-0016"
+    ],
+    "ticks_with_training_targets": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26
+    ]
+  },
+  "node_predictions": [
+    {
+      "tick": 0,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.3223389983177185,
+      "stockout_prob": 0.025267114862799644,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 0,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.2997390329837799,
+      "stockout_prob": 0.025678394362330437,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 0,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.353478342294693,
+      "stockout_prob": 0.014601241797208786,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 0,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.2524479925632477,
+      "stockout_prob": 0.05332355201244354,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 0,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.7049121260643005,
+      "stockout_prob": 0.007997514680027962,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 0,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.2956753373146057,
+      "stockout_prob": 0.014250759035348892,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 0,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.31376123428344727,
+      "stockout_prob": 0.011872979812324047,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 0,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.3814658522605896,
+      "stockout_prob": 0.014281907118856907,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 0,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9455263614654541,
+      "stockout_prob": 0.006176524329930544,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 0,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9490630626678467,
+      "stockout_prob": 0.006224675104022026,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 0,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9768372178077698,
+      "stockout_prob": 0.010103216394782066,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 0,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9635440707206726,
+      "stockout_prob": 0.007027056999504566,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 1,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.30234235525131226,
+      "stockout_prob": 0.03609345480799675,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 1,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.2833486795425415,
+      "stockout_prob": 0.03740108385682106,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 1,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.2838985025882721,
+      "stockout_prob": 0.019299641251564026,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 1,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.23429881036281586,
+      "stockout_prob": 0.07816216349601746,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 1,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.9191159605979919,
+      "stockout_prob": 0.008450028486549854,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 1,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.27543482184410095,
+      "stockout_prob": 0.01830681599676609,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 1,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.2657243609428406,
+      "stockout_prob": 0.014635392464697361,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 1,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.34484416246414185,
+      "stockout_prob": 0.01901121437549591,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 1,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.951519250869751,
+      "stockout_prob": 0.006333610974252224,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 1,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9568546414375305,
+      "stockout_prob": 0.006611050572246313,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 1,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9825149774551392,
+      "stockout_prob": 0.012771987356245518,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 1,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9728800058364868,
+      "stockout_prob": 0.007997318170964718,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 2,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.23842929303646088,
+      "stockout_prob": 0.10059063881635666,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 2,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.2588858902454376,
+      "stockout_prob": 0.07481168955564499,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 2,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.24415573477745056,
+      "stockout_prob": 0.030756374821066856,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 2,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.22526821494102478,
+      "stockout_prob": 0.1265648454427719,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 2,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.9324193000793457,
+      "stockout_prob": 0.4638005197048187,
+      "predicted_stockout_qty": 8.957145690917969
+    },
+    {
+      "tick": 2,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.22265322506427765,
+      "stockout_prob": 0.03463582322001457,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 2,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.20672215521335602,
+      "stockout_prob": 0.021806146949529648,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 2,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.3422335982322693,
+      "stockout_prob": 0.024028481915593147,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 2,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9591985940933228,
+      "stockout_prob": 0.0068322522565722466,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 2,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9653655886650085,
+      "stockout_prob": 0.007347975857555866,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 2,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9915186762809753,
+      "stockout_prob": 0.05100325867533684,
+      "predicted_stockout_qty": 4.029852867126465
+    },
+    {
+      "tick": 2,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9819952249526978,
+      "stockout_prob": 0.011452487669885159,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 3,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.17457598447799683,
+      "stockout_prob": 0.8166104555130005,
+      "predicted_stockout_qty": 3.6174020767211914
+    },
+    {
+      "tick": 3,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.17072732746601105,
+      "stockout_prob": 0.7952161431312561,
+      "predicted_stockout_qty": 10.997357368469238
+    },
+    {
+      "tick": 3,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.22860783338546753,
+      "stockout_prob": 0.053529269993305206,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 3,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.21177200973033905,
+      "stockout_prob": 0.20595687627792358,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 3,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.8913813233375549,
+      "stockout_prob": 0.981431245803833,
+      "predicted_stockout_qty": 13.835421562194824
+    },
+    {
+      "tick": 3,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.163589745759964,
+      "stockout_prob": 0.11200267821550369,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 3,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.18255823850631714,
+      "stockout_prob": 0.031140606850385666,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 3,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.1933887004852295,
+      "stockout_prob": 0.08393220603466034,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 3,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9667101502418518,
+      "stockout_prob": 0.007562786340713501,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 3,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9706274271011353,
+      "stockout_prob": 0.008366666734218597,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 3,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9936198592185974,
+      "stockout_prob": 0.2913341820240021,
+      "predicted_stockout_qty": 3.745190143585205
+    },
+    {
+      "tick": 3,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9882325530052185,
+      "stockout_prob": 0.01971181109547615,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 4,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.16693148016929626,
+      "stockout_prob": 0.984833300113678,
+      "predicted_stockout_qty": 25.270050048828125
+    },
+    {
+      "tick": 4,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.11441589146852493,
+      "stockout_prob": 0.9513788819313049,
+      "predicted_stockout_qty": 0.008782547898590565
+    },
+    {
+      "tick": 4,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.2067413479089737,
+      "stockout_prob": 0.10966991633176804,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 4,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.2072172313928604,
+      "stockout_prob": 0.30215638875961304,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 4,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.8593385219573975,
+      "stockout_prob": 0.9923720359802246,
+      "predicted_stockout_qty": 21.58308219909668
+    },
+    {
+      "tick": 4,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.1570148468017578,
+      "stockout_prob": 0.3406355679035187,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 4,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.16249868273735046,
+      "stockout_prob": 0.04468735307455063,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 4,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.09547185897827148,
+      "stockout_prob": 0.8015888333320618,
+      "predicted_stockout_qty": 6.354249000549316
+    },
+    {
+      "tick": 4,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9741379618644714,
+      "stockout_prob": 0.008789313957095146,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 4,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9728087782859802,
+      "stockout_prob": 0.00910789892077446,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 4,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9917253255844116,
+      "stockout_prob": 0.8162824511528015,
+      "predicted_stockout_qty": 8.377944946289062
+    },
+    {
+      "tick": 4,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9937328696250916,
+      "stockout_prob": 0.18287023901939392,
+      "predicted_stockout_qty": 9.89840316772461
+    },
+    {
+      "tick": 5,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.20648007094860077,
+      "stockout_prob": 0.9924433827400208,
+      "predicted_stockout_qty": 43.97291946411133
+    },
+    {
+      "tick": 5,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.13947707414627075,
+      "stockout_prob": 0.9848131537437439,
+      "predicted_stockout_qty": 24.58536148071289
+    },
+    {
+      "tick": 5,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.1964111477136612,
+      "stockout_prob": 0.23237007856369019,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 5,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.2051772177219391,
+      "stockout_prob": 0.4078405797481537,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 5,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.8801493048667908,
+      "stockout_prob": 0.9928573369979858,
+      "predicted_stockout_qty": 31.228803634643555
+    },
+    {
+      "tick": 5,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.16215048730373383,
+      "stockout_prob": 0.9456825256347656,
+      "predicted_stockout_qty": 5.259470462799072
+    },
+    {
+      "tick": 5,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.15370430052280426,
+      "stockout_prob": 0.07006168365478516,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 5,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.08893097937107086,
+      "stockout_prob": 0.9668629169464111,
+      "predicted_stockout_qty": 26.813194274902344
+    },
+    {
+      "tick": 5,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9774309992790222,
+      "stockout_prob": 0.009775019250810146,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 5,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9729692339897156,
+      "stockout_prob": 0.009401454590260983,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 5,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9831336140632629,
+      "stockout_prob": 0.964718222618103,
+      "predicted_stockout_qty": 57.55272674560547
+    },
+    {
+      "tick": 5,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9925357103347778,
+      "stockout_prob": 0.7340252995491028,
+      "predicted_stockout_qty": 11.858675956726074
+    },
+    {
+      "tick": 6,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.27944856882095337,
+      "stockout_prob": 0.9949653744697571,
+      "predicted_stockout_qty": 45.97193145751953
+    },
+    {
+      "tick": 6,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.17448005080223083,
+      "stockout_prob": 0.9903284907341003,
+      "predicted_stockout_qty": 52.571929931640625
+    },
+    {
+      "tick": 6,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.140834242105484,
+      "stockout_prob": 0.918631374835968,
+      "predicted_stockout_qty": 23.59190559387207
+    },
+    {
+      "tick": 6,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.17977072298526764,
+      "stockout_prob": 0.6898108720779419,
+      "predicted_stockout_qty": 2.9962642192840576
+    },
+    {
+      "tick": 6,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.8634868264198303,
+      "stockout_prob": 0.9940717816352844,
+      "predicted_stockout_qty": 47.51091003417969
+    },
+    {
+      "tick": 6,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.2403094470500946,
+      "stockout_prob": 0.9928367733955383,
+      "predicted_stockout_qty": 34.32002258300781
+    },
+    {
+      "tick": 6,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.1522810012102127,
+      "stockout_prob": 0.12944430112838745,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 6,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.10193616896867752,
+      "stockout_prob": 0.9809713959693909,
+      "predicted_stockout_qty": 33.693363189697266
+    },
+    {
+      "tick": 6,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.978898286819458,
+      "stockout_prob": 0.010739659890532494,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 6,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9751307368278503,
+      "stockout_prob": 0.010111226700246334,
+      "predicted_stockout_qty": 0.7986559867858887
+    },
+    {
+      "tick": 6,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9727485775947571,
+      "stockout_prob": 0.9817401170730591,
+      "predicted_stockout_qty": 83.23069763183594
+    },
+    {
+      "tick": 6,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9860760569572449,
+      "stockout_prob": 0.948997437953949,
+      "predicted_stockout_qty": 31.545894622802734
+    },
+    {
+      "tick": 7,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.2808964252471924,
+      "stockout_prob": 0.9949846267700195,
+      "predicted_stockout_qty": 33.71752166748047
+    },
+    {
+      "tick": 7,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.24752508103847504,
+      "stockout_prob": 0.9941080808639526,
+      "predicted_stockout_qty": 77.21573638916016
+    },
+    {
+      "tick": 7,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.15230046212673187,
+      "stockout_prob": 0.987055778503418,
+      "predicted_stockout_qty": 57.47482681274414
+    },
+    {
+      "tick": 7,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.11912424117326736,
+      "stockout_prob": 0.897165060043335,
+      "predicted_stockout_qty": 0.0008850465528666973
+    },
+    {
+      "tick": 7,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.801747739315033,
+      "stockout_prob": 0.9950442314147949,
+      "predicted_stockout_qty": 59.55672073364258
+    },
+    {
+      "tick": 7,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.3220534920692444,
+      "stockout_prob": 0.9951387643814087,
+      "predicted_stockout_qty": 66.9965591430664
+    },
+    {
+      "tick": 7,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.15297937393188477,
+      "stockout_prob": 0.2264430671930313,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 7,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.13069356977939606,
+      "stockout_prob": 0.9888733625411987,
+      "predicted_stockout_qty": 41.49642562866211
+    },
+    {
+      "tick": 7,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9796836376190186,
+      "stockout_prob": 0.010384771041572094,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 7,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9758267998695374,
+      "stockout_prob": 0.010420451872050762,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 7,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9641058444976807,
+      "stockout_prob": 0.9870763421058655,
+      "predicted_stockout_qty": 70.7961196899414
+    },
+    {
+      "tick": 7,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9773958921432495,
+      "stockout_prob": 0.9764378666877747,
+      "predicted_stockout_qty": 64.88002014160156
+    },
+    {
+      "tick": 8,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.28907477855682373,
+      "stockout_prob": 0.9951679706573486,
+      "predicted_stockout_qty": 52.22590637207031
+    },
+    {
+      "tick": 8,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.3242241144180298,
+      "stockout_prob": 0.9951972365379333,
+      "predicted_stockout_qty": 115.53982543945312
+    },
+    {
+      "tick": 8,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.20339247584342957,
+      "stockout_prob": 0.993759274482727,
+      "predicted_stockout_qty": 79.7217788696289
+    },
+    {
+      "tick": 8,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.10380224138498306,
+      "stockout_prob": 0.9649056792259216,
+      "predicted_stockout_qty": 27.82547950744629
+    },
+    {
+      "tick": 8,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.7990346550941467,
+      "stockout_prob": 0.9950898885726929,
+      "predicted_stockout_qty": 68.01728057861328
+    },
+    {
+      "tick": 8,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.43550941348075867,
+      "stockout_prob": 0.9957399368286133,
+      "predicted_stockout_qty": 62.70296096801758
+    },
+    {
+      "tick": 8,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.16362424194812775,
+      "stockout_prob": 0.37171489000320435,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 8,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.1464226394891739,
+      "stockout_prob": 0.990957498550415,
+      "predicted_stockout_qty": 56.526493072509766
+    },
+    {
+      "tick": 8,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9816262722015381,
+      "stockout_prob": 0.012189654633402824,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 8,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9821437001228333,
+      "stockout_prob": 0.011981719173491001,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 8,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9607172012329102,
+      "stockout_prob": 0.9880169630050659,
+      "predicted_stockout_qty": 83.81970977783203
+    },
+    {
+      "tick": 8,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9697874188423157,
+      "stockout_prob": 0.9834375381469727,
+      "predicted_stockout_qty": 82.35961151123047
+    },
+    {
+      "tick": 9,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.28182393312454224,
+      "stockout_prob": 0.9950933456420898,
+      "predicted_stockout_qty": 82.75581359863281
+    },
+    {
+      "tick": 9,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.3478938937187195,
+      "stockout_prob": 0.9953712821006775,
+      "predicted_stockout_qty": 97.50435638427734
+    },
+    {
+      "tick": 9,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.2156352996826172,
+      "stockout_prob": 0.9942086935043335,
+      "predicted_stockout_qty": 66.45492553710938
+    },
+    {
+      "tick": 9,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.10834218561649323,
+      "stockout_prob": 0.9792259931564331,
+      "predicted_stockout_qty": 54.68703079223633
+    },
+    {
+      "tick": 9,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.8025186061859131,
+      "stockout_prob": 0.9950247406959534,
+      "predicted_stockout_qty": 83.73138427734375
+    },
+    {
+      "tick": 9,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.48137685656547546,
+      "stockout_prob": 0.9956473708152771,
+      "predicted_stockout_qty": 53.245758056640625
+    },
+    {
+      "tick": 9,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.13268660008907318,
+      "stockout_prob": 0.8779531717300415,
+      "predicted_stockout_qty": 11.392309188842773
+    },
+    {
+      "tick": 9,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.16649238765239716,
+      "stockout_prob": 0.9922917485237122,
+      "predicted_stockout_qty": 71.76622772216797
+    },
+    {
+      "tick": 9,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9834986329078674,
+      "stockout_prob": 0.0140576446428895,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 9,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9841583967208862,
+      "stockout_prob": 0.013581536710262299,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 9,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9589287638664246,
+      "stockout_prob": 0.9884047508239746,
+      "predicted_stockout_qty": 83.3993148803711
+    },
+    {
+      "tick": 9,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9649966955184937,
+      "stockout_prob": 0.9850442409515381,
+      "predicted_stockout_qty": 90.24288177490234
+    },
+    {
+      "tick": 10,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.2871466279029846,
+      "stockout_prob": 0.9950952529907227,
+      "predicted_stockout_qty": 129.7515106201172
+    },
+    {
+      "tick": 10,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.36668282747268677,
+      "stockout_prob": 0.9953560829162598,
+      "predicted_stockout_qty": 120.66112518310547
+    },
+    {
+      "tick": 10,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.2234087735414505,
+      "stockout_prob": 0.9941713213920593,
+      "predicted_stockout_qty": 71.82815551757812
+    },
+    {
+      "tick": 10,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.12369568645954132,
+      "stockout_prob": 0.9861452579498291,
+      "predicted_stockout_qty": 49.891944885253906
+    },
+    {
+      "tick": 10,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.8138146996498108,
+      "stockout_prob": 0.9948456287384033,
+      "predicted_stockout_qty": 81.80833435058594
+    },
+    {
+      "tick": 10,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.5380522608757019,
+      "stockout_prob": 0.9954836368560791,
+      "predicted_stockout_qty": 83.14772033691406
+    },
+    {
+      "tick": 10,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.13087812066078186,
+      "stockout_prob": 0.9695558547973633,
+      "predicted_stockout_qty": 18.014455795288086
+    },
+    {
+      "tick": 10,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.14468975365161896,
+      "stockout_prob": 0.9915127158164978,
+      "predicted_stockout_qty": 70.85157012939453
+    },
+    {
+      "tick": 10,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9854711294174194,
+      "stockout_prob": 0.017191922292113304,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 10,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9859710335731506,
+      "stockout_prob": 0.016965322196483612,
+      "predicted_stockout_qty": 0.0743953287601471
+    },
+    {
+      "tick": 10,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9581325650215149,
+      "stockout_prob": 0.9881678223609924,
+      "predicted_stockout_qty": 85.29386138916016
+    },
+    {
+      "tick": 10,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9617180824279785,
+      "stockout_prob": 0.9850074648857117,
+      "predicted_stockout_qty": 109.55936431884766
+    },
+    {
+      "tick": 11,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.2971038520336151,
+      "stockout_prob": 0.9948437213897705,
+      "predicted_stockout_qty": 131.0019073486328
+    },
+    {
+      "tick": 11,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.23023700714111328,
+      "stockout_prob": 0.9932708144187927,
+      "predicted_stockout_qty": 49.806304931640625
+    },
+    {
+      "tick": 11,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.24561330676078796,
+      "stockout_prob": 0.9945611357688904,
+      "predicted_stockout_qty": 98.48824310302734
+    },
+    {
+      "tick": 11,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.13285155594348907,
+      "stockout_prob": 0.987434446811676,
+      "predicted_stockout_qty": 68.10562896728516
+    },
+    {
+      "tick": 11,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.8221716284751892,
+      "stockout_prob": 0.9945346117019653,
+      "predicted_stockout_qty": 113.08928680419922
+    },
+    {
+      "tick": 11,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.5581479668617249,
+      "stockout_prob": 0.9953334927558899,
+      "predicted_stockout_qty": 73.99810791015625
+    },
+    {
+      "tick": 11,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.18163609504699707,
+      "stockout_prob": 0.9922164678573608,
+      "predicted_stockout_qty": 27.571680068969727
+    },
+    {
+      "tick": 11,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.16333533823490143,
+      "stockout_prob": 0.9927582740783691,
+      "predicted_stockout_qty": 77.2257308959961
+    },
+    {
+      "tick": 11,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9920331835746765,
+      "stockout_prob": 0.06664778292179108,
+      "predicted_stockout_qty": 9.672041893005371
+    },
+    {
+      "tick": 11,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9860878586769104,
+      "stockout_prob": 0.01621546410024166,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 11,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.956838846206665,
+      "stockout_prob": 0.9877390265464783,
+      "predicted_stockout_qty": 102.04386138916016
+    },
+    {
+      "tick": 11,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9595097303390503,
+      "stockout_prob": 0.9851051568984985,
+      "predicted_stockout_qty": 110.86852264404297
+    },
+    {
+      "tick": 12,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.4295509159564972,
+      "stockout_prob": 0.994752049446106,
+      "predicted_stockout_qty": 145.17355346679688
+    },
+    {
+      "tick": 12,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.24461066722869873,
+      "stockout_prob": 0.9936801195144653,
+      "predicted_stockout_qty": 130.1550750732422
+    },
+    {
+      "tick": 12,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.2415073812007904,
+      "stockout_prob": 0.9943536520004272,
+      "predicted_stockout_qty": 103.9031982421875
+    },
+    {
+      "tick": 12,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.13400870561599731,
+      "stockout_prob": 0.9869406819343567,
+      "predicted_stockout_qty": 80.49124145507812
+    },
+    {
+      "tick": 12,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.8135880827903748,
+      "stockout_prob": 0.9944542050361633,
+      "predicted_stockout_qty": 106.65418243408203
+    },
+    {
+      "tick": 12,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.7094061970710754,
+      "stockout_prob": 0.9950956106185913,
+      "predicted_stockout_qty": 80.43840789794922
+    },
+    {
+      "tick": 12,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.24786841869354248,
+      "stockout_prob": 0.994066596031189,
+      "predicted_stockout_qty": 31.9508113861084
+    },
+    {
+      "tick": 12,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.17766578495502472,
+      "stockout_prob": 0.9934322834014893,
+      "predicted_stockout_qty": 115.0771255493164
+    },
+    {
+      "tick": 12,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9935709238052368,
+      "stockout_prob": 0.2942357659339905,
+      "predicted_stockout_qty": 12.561992645263672
+    },
+    {
+      "tick": 12,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9888764023780823,
+      "stockout_prob": 0.021721217781305313,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 12,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9559900164604187,
+      "stockout_prob": 0.9870779514312744,
+      "predicted_stockout_qty": 109.93382263183594
+    },
+    {
+      "tick": 12,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9603273272514343,
+      "stockout_prob": 0.986307680606842,
+      "predicted_stockout_qty": 107.41841888427734
+    },
+    {
+      "tick": 13,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.4884384572505951,
+      "stockout_prob": 0.9939793348312378,
+      "predicted_stockout_qty": 140.06471252441406
+    },
+    {
+      "tick": 13,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.2525341808795929,
+      "stockout_prob": 0.9935770630836487,
+      "predicted_stockout_qty": 151.68173217773438
+    },
+    {
+      "tick": 13,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.2338493913412094,
+      "stockout_prob": 0.9941133856773376,
+      "predicted_stockout_qty": 123.48763275146484
+    },
+    {
+      "tick": 13,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.13224592804908752,
+      "stockout_prob": 0.9873530864715576,
+      "predicted_stockout_qty": 117.75074005126953
+    },
+    {
+      "tick": 13,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.8046844005584717,
+      "stockout_prob": 0.9944539666175842,
+      "predicted_stockout_qty": 108.92969512939453
+    },
+    {
+      "tick": 13,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.819194495677948,
+      "stockout_prob": 0.9938924312591553,
+      "predicted_stockout_qty": 104.39436340332031
+    },
+    {
+      "tick": 13,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.3513975143432617,
+      "stockout_prob": 0.9951958060264587,
+      "predicted_stockout_qty": 103.64920043945312
+    },
+    {
+      "tick": 13,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.19401174783706665,
+      "stockout_prob": 0.993623673915863,
+      "predicted_stockout_qty": 93.14014434814453
+    },
+    {
+      "tick": 13,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9908158779144287,
+      "stockout_prob": 0.7802765369415283,
+      "predicted_stockout_qty": 32.81773376464844
+    },
+    {
+      "tick": 13,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9927934408187866,
+      "stockout_prob": 0.05146035552024841,
+      "predicted_stockout_qty": 4.021961688995361
+    },
+    {
+      "tick": 13,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9547705054283142,
+      "stockout_prob": 0.9869105219841003,
+      "predicted_stockout_qty": 121.05089569091797
+    },
+    {
+      "tick": 13,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9601773023605347,
+      "stockout_prob": 0.9865148663520813,
+      "predicted_stockout_qty": 123.67523193359375
+    },
+    {
+      "tick": 14,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.5134161710739136,
+      "stockout_prob": 0.9933527708053589,
+      "predicted_stockout_qty": 149.0912322998047
+    },
+    {
+      "tick": 14,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.2945515215396881,
+      "stockout_prob": 0.9940350651741028,
+      "predicted_stockout_qty": 137.8070068359375
+    },
+    {
+      "tick": 14,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.2451898604631424,
+      "stockout_prob": 0.9937166571617126,
+      "predicted_stockout_qty": 130.511474609375
+    },
+    {
+      "tick": 14,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.13119225203990936,
+      "stockout_prob": 0.9861717820167542,
+      "predicted_stockout_qty": 127.85655212402344
+    },
+    {
+      "tick": 14,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.7402036190032959,
+      "stockout_prob": 0.9950270056724548,
+      "predicted_stockout_qty": 123.03399658203125
+    },
+    {
+      "tick": 14,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.8483497500419617,
+      "stockout_prob": 0.9932289123535156,
+      "predicted_stockout_qty": 83.09693145751953
+    },
+    {
+      "tick": 14,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.40390583872795105,
+      "stockout_prob": 0.9955952763557434,
+      "predicted_stockout_qty": 134.8797607421875
+    },
+    {
+      "tick": 14,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.2149205356836319,
+      "stockout_prob": 0.9940658807754517,
+      "predicted_stockout_qty": 118.49877166748047
+    },
+    {
+      "tick": 14,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9883970618247986,
+      "stockout_prob": 0.8962820172309875,
+      "predicted_stockout_qty": 29.91888427734375
+    },
+    {
+      "tick": 14,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9920681715011597,
+      "stockout_prob": 0.04518268629908562,
+      "predicted_stockout_qty": 0.0
+    },
+    {
+      "tick": 14,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9541254639625549,
+      "stockout_prob": 0.9869415163993835,
+      "predicted_stockout_qty": 101.0329360961914
+    },
+    {
+      "tick": 14,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9597042798995972,
+      "stockout_prob": 0.9866809844970703,
+      "predicted_stockout_qty": 133.23133850097656
+    },
+    {
+      "tick": 15,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.3749004602432251,
+      "stockout_prob": 0.9928983449935913,
+      "predicted_stockout_qty": 142.07778930664062
+    },
+    {
+      "tick": 15,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.2925342321395874,
+      "stockout_prob": 0.9937647581100464,
+      "predicted_stockout_qty": 152.5991973876953
+    },
+    {
+      "tick": 15,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.257018506526947,
+      "stockout_prob": 0.9933870434761047,
+      "predicted_stockout_qty": 125.25564575195312
+    },
+    {
+      "tick": 15,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.12897299230098724,
+      "stockout_prob": 0.9808794856071472,
+      "predicted_stockout_qty": 132.41384887695312
+    },
+    {
+      "tick": 15,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.7782472372055054,
+      "stockout_prob": 0.99456787109375,
+      "predicted_stockout_qty": 116.18572998046875
+    },
+    {
+      "tick": 15,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.8408893346786499,
+      "stockout_prob": 0.9931842684745789,
+      "predicted_stockout_qty": 90.02035522460938
+    },
+    {
+      "tick": 15,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.44755473732948303,
+      "stockout_prob": 0.9955326318740845,
+      "predicted_stockout_qty": 109.99795532226562
+    },
+    {
+      "tick": 15,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.22949814796447754,
+      "stockout_prob": 0.9940853118896484,
+      "predicted_stockout_qty": 116.618408203125
+    },
+    {
+      "tick": 15,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9860538840293884,
+      "stockout_prob": 0.9306581020355225,
+      "predicted_stockout_qty": 35.91159439086914
+    },
+    {
+      "tick": 15,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9941470623016357,
+      "stockout_prob": 0.26656925678253174,
+      "predicted_stockout_qty": 13.847413063049316
+    },
+    {
+      "tick": 15,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9546176195144653,
+      "stockout_prob": 0.9862785935401917,
+      "predicted_stockout_qty": 108.24687194824219
+    },
+    {
+      "tick": 15,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9577230215072632,
+      "stockout_prob": 0.9867488145828247,
+      "predicted_stockout_qty": 129.52725219726562
+    },
+    {
+      "tick": 16,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.3020389676094055,
+      "stockout_prob": 0.9898568391799927,
+      "predicted_stockout_qty": 174.48513793945312
+    },
+    {
+      "tick": 16,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.25012141466140747,
+      "stockout_prob": 0.991238534450531,
+      "predicted_stockout_qty": 185.41944885253906
+    },
+    {
+      "tick": 16,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.2927197217941284,
+      "stockout_prob": 0.993503987789154,
+      "predicted_stockout_qty": 158.60650634765625
+    },
+    {
+      "tick": 16,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.1172945499420166,
+      "stockout_prob": 0.9713134765625,
+      "predicted_stockout_qty": 98.19781494140625
+    },
+    {
+      "tick": 16,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.8164433836936951,
+      "stockout_prob": 0.9938364624977112,
+      "predicted_stockout_qty": 140.8941650390625
+    },
+    {
+      "tick": 16,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.6878074407577515,
+      "stockout_prob": 0.9948273301124573,
+      "predicted_stockout_qty": 34.138824462890625
+    },
+    {
+      "tick": 16,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.45630553364753723,
+      "stockout_prob": 0.995244562625885,
+      "predicted_stockout_qty": 93.06610107421875
+    },
+    {
+      "tick": 16,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.24468202888965607,
+      "stockout_prob": 0.9941226840019226,
+      "predicted_stockout_qty": 129.74266052246094
+    },
+    {
+      "tick": 16,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9832453727722168,
+      "stockout_prob": 0.9491754770278931,
+      "predicted_stockout_qty": 60.382545471191406
+    },
+    {
+      "tick": 16,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9934468865394592,
+      "stockout_prob": 0.4737853407859802,
+      "predicted_stockout_qty": 6.039918899536133
+    },
+    {
+      "tick": 16,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9546940326690674,
+      "stockout_prob": 0.9859280586242676,
+      "predicted_stockout_qty": 116.42266845703125
+    },
+    {
+      "tick": 16,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9568681716918945,
+      "stockout_prob": 0.986747145652771,
+      "predicted_stockout_qty": 120.10576629638672
+    },
+    {
+      "tick": 17,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.252591609954834,
+      "stockout_prob": 0.9873226284980774,
+      "predicted_stockout_qty": 150.1922607421875
+    },
+    {
+      "tick": 17,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.23301155865192413,
+      "stockout_prob": 0.9887613654136658,
+      "predicted_stockout_qty": 172.70933532714844
+    },
+    {
+      "tick": 17,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.31039881706237793,
+      "stockout_prob": 0.9934484362602234,
+      "predicted_stockout_qty": 158.0846710205078
+    },
+    {
+      "tick": 17,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.12227996438741684,
+      "stockout_prob": 0.9722347855567932,
+      "predicted_stockout_qty": 137.88479614257812
+    },
+    {
+      "tick": 17,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.8352487087249756,
+      "stockout_prob": 0.9931487441062927,
+      "predicted_stockout_qty": 133.9795379638672
+    },
+    {
+      "tick": 17,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.6695016026496887,
+      "stockout_prob": 0.9949668049812317,
+      "predicted_stockout_qty": 87.71768951416016
+    },
+    {
+      "tick": 17,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.47337836027145386,
+      "stockout_prob": 0.9950706958770752,
+      "predicted_stockout_qty": 107.49272918701172
+    },
+    {
+      "tick": 17,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.2839849591255188,
+      "stockout_prob": 0.9944440722465515,
+      "predicted_stockout_qty": 133.43560791015625
+    },
+    {
+      "tick": 17,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9804137349128723,
+      "stockout_prob": 0.9606954455375671,
+      "predicted_stockout_qty": 53.16136932373047
+    },
+    {
+      "tick": 17,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9866188168525696,
+      "stockout_prob": 0.9045382142066956,
+      "predicted_stockout_qty": 38.979007720947266
+    },
+    {
+      "tick": 17,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9543709754943848,
+      "stockout_prob": 0.9857234358787537,
+      "predicted_stockout_qty": 117.70459747314453
+    },
+    {
+      "tick": 17,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9566289782524109,
+      "stockout_prob": 0.986441433429718,
+      "predicted_stockout_qty": 115.5915756225586
+    },
+    {
+      "tick": 18,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.255797415971756,
+      "stockout_prob": 0.9861438274383545,
+      "predicted_stockout_qty": 170.3250732421875
+    },
+    {
+      "tick": 18,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.22933393716812134,
+      "stockout_prob": 0.9871851801872253,
+      "predicted_stockout_qty": 180.81715393066406
+    },
+    {
+      "tick": 18,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.3000856339931488,
+      "stockout_prob": 0.9931970834732056,
+      "predicted_stockout_qty": 146.8300323486328
+    },
+    {
+      "tick": 18,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.12616901099681854,
+      "stockout_prob": 0.9738330841064453,
+      "predicted_stockout_qty": 135.73074340820312
+    },
+    {
+      "tick": 18,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.8152250647544861,
+      "stockout_prob": 0.9934443235397339,
+      "predicted_stockout_qty": 134.87936401367188
+    },
+    {
+      "tick": 18,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.6784306168556213,
+      "stockout_prob": 0.9949583411216736,
+      "predicted_stockout_qty": 92.16532897949219
+    },
+    {
+      "tick": 18,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.49606817960739136,
+      "stockout_prob": 0.9950683116912842,
+      "predicted_stockout_qty": 99.89832305908203
+    },
+    {
+      "tick": 18,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.32793790102005005,
+      "stockout_prob": 0.9947161078453064,
+      "predicted_stockout_qty": 141.38555908203125
+    },
+    {
+      "tick": 18,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.977384090423584,
+      "stockout_prob": 0.9660431742668152,
+      "predicted_stockout_qty": 41.88722610473633
+    },
+    {
+      "tick": 18,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9813343286514282,
+      "stockout_prob": 0.9453561902046204,
+      "predicted_stockout_qty": 30.016550064086914
+    },
+    {
+      "tick": 18,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9533682465553284,
+      "stockout_prob": 0.9859029054641724,
+      "predicted_stockout_qty": 111.4432144165039
+    },
+    {
+      "tick": 18,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9556085467338562,
+      "stockout_prob": 0.9857093095779419,
+      "predicted_stockout_qty": 139.3651580810547
+    },
+    {
+      "tick": 19,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.2502685487270355,
+      "stockout_prob": 0.9859711527824402,
+      "predicted_stockout_qty": 159.4823760986328
+    },
+    {
+      "tick": 19,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.22718660533428192,
+      "stockout_prob": 0.9868191480636597,
+      "predicted_stockout_qty": 174.7929229736328
+    },
+    {
+      "tick": 19,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.1686953902244568,
+      "stockout_prob": 0.9888035655021667,
+      "predicted_stockout_qty": 56.61549377441406
+    },
+    {
+      "tick": 19,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.12383341044187546,
+      "stockout_prob": 0.9719314575195312,
+      "predicted_stockout_qty": 115.86614990234375
+    },
+    {
+      "tick": 19,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.7531359791755676,
+      "stockout_prob": 0.9944373369216919,
+      "predicted_stockout_qty": 63.09659957885742
+    },
+    {
+      "tick": 19,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.724633514881134,
+      "stockout_prob": 0.9948093891143799,
+      "predicted_stockout_qty": 119.44525909423828
+    },
+    {
+      "tick": 19,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.6731041073799133,
+      "stockout_prob": 0.9946832060813904,
+      "predicted_stockout_qty": 117.9605484008789
+    },
+    {
+      "tick": 19,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.3295400142669678,
+      "stockout_prob": 0.9946388602256775,
+      "predicted_stockout_qty": 110.0585708618164
+    },
+    {
+      "tick": 19,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9719287157058716,
+      "stockout_prob": 0.9710611701011658,
+      "predicted_stockout_qty": 55.31731414794922
+    },
+    {
+      "tick": 19,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9751601219177246,
+      "stockout_prob": 0.9631902575492859,
+      "predicted_stockout_qty": 44.73860549926758
+    },
+    {
+      "tick": 19,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9527471661567688,
+      "stockout_prob": 0.9856879711151123,
+      "predicted_stockout_qty": 134.5721435546875
+    },
+    {
+      "tick": 19,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9548774361610413,
+      "stockout_prob": 0.9850354194641113,
+      "predicted_stockout_qty": 127.1915512084961
+    },
+    {
+      "tick": 20,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.2571266293525696,
+      "stockout_prob": 0.9862157106399536,
+      "predicted_stockout_qty": 169.6809844970703
+    },
+    {
+      "tick": 20,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.2291213721036911,
+      "stockout_prob": 0.9868641495704651,
+      "predicted_stockout_qty": 179.81492614746094
+    },
+    {
+      "tick": 20,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.173415407538414,
+      "stockout_prob": 0.990193784236908,
+      "predicted_stockout_qty": 156.8253631591797
+    },
+    {
+      "tick": 20,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.12649208307266235,
+      "stockout_prob": 0.973188579082489,
+      "predicted_stockout_qty": 135.91107177734375
+    },
+    {
+      "tick": 20,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.7675756216049194,
+      "stockout_prob": 0.9944052696228027,
+      "predicted_stockout_qty": 136.4951629638672
+    },
+    {
+      "tick": 20,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.7438638806343079,
+      "stockout_prob": 0.9945812821388245,
+      "predicted_stockout_qty": 127.07540130615234
+    },
+    {
+      "tick": 20,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.7080556154251099,
+      "stockout_prob": 0.9944024682044983,
+      "predicted_stockout_qty": 100.16314697265625
+    },
+    {
+      "tick": 20,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.3652089834213257,
+      "stockout_prob": 0.994712769985199,
+      "predicted_stockout_qty": 132.35540771484375
+    },
+    {
+      "tick": 20,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9665437340736389,
+      "stockout_prob": 0.9754461050033569,
+      "predicted_stockout_qty": 48.369224548339844
+    },
+    {
+      "tick": 20,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9729439616203308,
+      "stockout_prob": 0.964677631855011,
+      "predicted_stockout_qty": 42.006710052490234
+    },
+    {
+      "tick": 20,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9527990818023682,
+      "stockout_prob": 0.9866929650306702,
+      "predicted_stockout_qty": 146.76675415039062
+    },
+    {
+      "tick": 20,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.955000102519989,
+      "stockout_prob": 0.9839040040969849,
+      "predicted_stockout_qty": 129.24710083007812
+    },
+    {
+      "tick": 21,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.16855183243751526,
+      "stockout_prob": 0.9809384346008301,
+      "predicted_stockout_qty": 72.65332794189453
+    },
+    {
+      "tick": 21,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.2256159782409668,
+      "stockout_prob": 0.9866724014282227,
+      "predicted_stockout_qty": 174.5588836669922
+    },
+    {
+      "tick": 21,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.25327378511428833,
+      "stockout_prob": 0.9923535585403442,
+      "predicted_stockout_qty": 151.93165588378906
+    },
+    {
+      "tick": 21,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.12195634096860886,
+      "stockout_prob": 0.9704657793045044,
+      "predicted_stockout_qty": 114.04887390136719
+    },
+    {
+      "tick": 21,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.6949411034584045,
+      "stockout_prob": 0.9933103322982788,
+      "predicted_stockout_qty": 55.75395584106445
+    },
+    {
+      "tick": 21,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.7711257934570312,
+      "stockout_prob": 0.9940894842147827,
+      "predicted_stockout_qty": 110.24412536621094
+    },
+    {
+      "tick": 21,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.7724360823631287,
+      "stockout_prob": 0.9936688542366028,
+      "predicted_stockout_qty": 92.73168182373047
+    },
+    {
+      "tick": 21,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.3831437826156616,
+      "stockout_prob": 0.9946579337120056,
+      "predicted_stockout_qty": 134.89854431152344
+    },
+    {
+      "tick": 21,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9635639190673828,
+      "stockout_prob": 0.9771518111228943,
+      "predicted_stockout_qty": 48.82143783569336
+    },
+    {
+      "tick": 21,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9717928171157837,
+      "stockout_prob": 0.9733796119689941,
+      "predicted_stockout_qty": 56.52056884765625
+    },
+    {
+      "tick": 21,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9514926075935364,
+      "stockout_prob": 0.98753821849823,
+      "predicted_stockout_qty": 141.94549560546875
+    },
+    {
+      "tick": 21,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9550760984420776,
+      "stockout_prob": 0.9835771918296814,
+      "predicted_stockout_qty": 128.468505859375
+    },
+    {
+      "tick": 22,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.17745940387248993,
+      "stockout_prob": 0.982947051525116,
+      "predicted_stockout_qty": 149.26710510253906
+    },
+    {
+      "tick": 22,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.21586035192012787,
+      "stockout_prob": 0.986100971698761,
+      "predicted_stockout_qty": 161.9630584716797
+    },
+    {
+      "tick": 22,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.37117183208465576,
+      "stockout_prob": 0.9929870963096619,
+      "predicted_stockout_qty": 164.4620361328125
+    },
+    {
+      "tick": 22,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.12623398005962372,
+      "stockout_prob": 0.972411036491394,
+      "predicted_stockout_qty": 133.83480834960938
+    },
+    {
+      "tick": 22,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.7494380474090576,
+      "stockout_prob": 0.9940379858016968,
+      "predicted_stockout_qty": 149.03492736816406
+    },
+    {
+      "tick": 22,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.7868765592575073,
+      "stockout_prob": 0.9936609268188477,
+      "predicted_stockout_qty": 131.09835815429688
+    },
+    {
+      "tick": 22,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.699583888053894,
+      "stockout_prob": 0.9941014647483826,
+      "predicted_stockout_qty": 100.68653106689453
+    },
+    {
+      "tick": 22,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.27166104316711426,
+      "stockout_prob": 0.993601381778717,
+      "predicted_stockout_qty": 62.6134147644043
+    },
+    {
+      "tick": 22,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9654983878135681,
+      "stockout_prob": 0.9775422811508179,
+      "predicted_stockout_qty": 57.821346282958984
+    },
+    {
+      "tick": 22,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9677276611328125,
+      "stockout_prob": 0.9771575331687927,
+      "predicted_stockout_qty": 35.881080627441406
+    },
+    {
+      "tick": 22,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9509953260421753,
+      "stockout_prob": 0.987821638584137,
+      "predicted_stockout_qty": 157.54978942871094
+    },
+    {
+      "tick": 22,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9549250602722168,
+      "stockout_prob": 0.9834408760070801,
+      "predicted_stockout_qty": 134.2216339111328
+    },
+    {
+      "tick": 23,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.18396617472171783,
+      "stockout_prob": 0.9836583733558655,
+      "predicted_stockout_qty": 145.7284393310547
+    },
+    {
+      "tick": 23,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.2253648042678833,
+      "stockout_prob": 0.9865648746490479,
+      "predicted_stockout_qty": 186.47158813476562
+    },
+    {
+      "tick": 23,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.37127795815467834,
+      "stockout_prob": 0.9921701550483704,
+      "predicted_stockout_qty": 161.46571350097656
+    },
+    {
+      "tick": 23,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.12297213077545166,
+      "stockout_prob": 0.9701254963874817,
+      "predicted_stockout_qty": 115.76944732666016
+    },
+    {
+      "tick": 23,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.758690357208252,
+      "stockout_prob": 0.9940698146820068,
+      "predicted_stockout_qty": 127.04163360595703
+    },
+    {
+      "tick": 23,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.7893358469009399,
+      "stockout_prob": 0.993522584438324,
+      "predicted_stockout_qty": 131.08551025390625
+    },
+    {
+      "tick": 23,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.7062011361122131,
+      "stockout_prob": 0.9940124154090881,
+      "predicted_stockout_qty": 101.08685302734375
+    },
+    {
+      "tick": 23,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.31128957867622375,
+      "stockout_prob": 0.9940323233604431,
+      "predicted_stockout_qty": 136.73782348632812
+    },
+    {
+      "tick": 23,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9645043611526489,
+      "stockout_prob": 0.9765884876251221,
+      "predicted_stockout_qty": 47.45417785644531
+    },
+    {
+      "tick": 23,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.96383136510849,
+      "stockout_prob": 0.9787157773971558,
+      "predicted_stockout_qty": 41.932342529296875
+    },
+    {
+      "tick": 23,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9502934217453003,
+      "stockout_prob": 0.9875668287277222,
+      "predicted_stockout_qty": 135.66477966308594
+    },
+    {
+      "tick": 23,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9538114070892334,
+      "stockout_prob": 0.9835187196731567,
+      "predicted_stockout_qty": 121.23149871826172
+    },
+    {
+      "tick": 24,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.21507124602794647,
+      "stockout_prob": 0.9846867918968201,
+      "predicted_stockout_qty": 150.22434997558594
+    },
+    {
+      "tick": 24,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.2170579433441162,
+      "stockout_prob": 0.9860703349113464,
+      "predicted_stockout_qty": 164.4826202392578
+    },
+    {
+      "tick": 24,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.2700185477733612,
+      "stockout_prob": 0.9907068610191345,
+      "predicted_stockout_qty": 163.03135681152344
+    },
+    {
+      "tick": 24,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.12430714070796967,
+      "stockout_prob": 0.9702750444412231,
+      "predicted_stockout_qty": 122.53871154785156
+    },
+    {
+      "tick": 24,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.7800410389900208,
+      "stockout_prob": 0.9939250349998474,
+      "predicted_stockout_qty": 137.4303741455078
+    },
+    {
+      "tick": 24,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.7509288787841797,
+      "stockout_prob": 0.994009256362915,
+      "predicted_stockout_qty": 115.07496643066406
+    },
+    {
+      "tick": 24,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.6135275959968567,
+      "stockout_prob": 0.9943220615386963,
+      "predicted_stockout_qty": 99.73554992675781
+    },
+    {
+      "tick": 24,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.40918195247650146,
+      "stockout_prob": 0.99428790807724,
+      "predicted_stockout_qty": 134.03631591796875
+    },
+    {
+      "tick": 24,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9615005850791931,
+      "stockout_prob": 0.9773243069648743,
+      "predicted_stockout_qty": 80.45475769042969
+    },
+    {
+      "tick": 24,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9654154777526855,
+      "stockout_prob": 0.9773923754692078,
+      "predicted_stockout_qty": 29.725675582885742
+    },
+    {
+      "tick": 24,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9505867958068848,
+      "stockout_prob": 0.9860548377037048,
+      "predicted_stockout_qty": 114.186767578125
+    },
+    {
+      "tick": 24,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9536885023117065,
+      "stockout_prob": 0.9831515550613403,
+      "predicted_stockout_qty": 126.00643920898438
+    },
+    {
+      "tick": 25,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.21784114837646484,
+      "stockout_prob": 0.9848292469978333,
+      "predicted_stockout_qty": 144.63970947265625
+    },
+    {
+      "tick": 25,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.22522853314876556,
+      "stockout_prob": 0.9864034652709961,
+      "predicted_stockout_qty": 182.66900634765625
+    },
+    {
+      "tick": 25,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.21887443959712982,
+      "stockout_prob": 0.9869996905326843,
+      "predicted_stockout_qty": 168.61734008789062
+    },
+    {
+      "tick": 25,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.12486772984266281,
+      "stockout_prob": 0.9702816605567932,
+      "predicted_stockout_qty": 124.02015686035156
+    },
+    {
+      "tick": 25,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.7945631742477417,
+      "stockout_prob": 0.9935391545295715,
+      "predicted_stockout_qty": 134.2130584716797
+    },
+    {
+      "tick": 25,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.7471864819526672,
+      "stockout_prob": 0.9939273595809937,
+      "predicted_stockout_qty": 130.71807861328125
+    },
+    {
+      "tick": 25,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.60086989402771,
+      "stockout_prob": 0.9943116903305054,
+      "predicted_stockout_qty": 107.1967544555664
+    },
+    {
+      "tick": 25,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.33997341990470886,
+      "stockout_prob": 0.9920411705970764,
+      "predicted_stockout_qty": 48.73054504394531
+    },
+    {
+      "tick": 25,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9596302509307861,
+      "stockout_prob": 0.9782116413116455,
+      "predicted_stockout_qty": 81.42105102539062
+    },
+    {
+      "tick": 25,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9642068147659302,
+      "stockout_prob": 0.9766055345535278,
+      "predicted_stockout_qty": 46.19578170776367
+    },
+    {
+      "tick": 25,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.949554443359375,
+      "stockout_prob": 0.9869017004966736,
+      "predicted_stockout_qty": 132.88320922851562
+    },
+    {
+      "tick": 25,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9542840123176575,
+      "stockout_prob": 0.982450008392334,
+      "predicted_stockout_qty": 125.95079803466797
+    },
+    {
+      "tick": 26,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.23934970796108246,
+      "stockout_prob": 0.9862796068191528,
+      "predicted_stockout_qty": 171.2039031982422
+    },
+    {
+      "tick": 26,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.2299199253320694,
+      "stockout_prob": 0.9866064190864563,
+      "predicted_stockout_qty": 187.5338134765625
+    },
+    {
+      "tick": 26,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.20278388261795044,
+      "stockout_prob": 0.9850044250488281,
+      "predicted_stockout_qty": 171.696044921875
+    },
+    {
+      "tick": 26,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.12977369129657745,
+      "stockout_prob": 0.9723312258720398,
+      "predicted_stockout_qty": 135.73439025878906
+    },
+    {
+      "tick": 26,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.8047131896018982,
+      "stockout_prob": 0.993311882019043,
+      "predicted_stockout_qty": 132.9324493408203
+    },
+    {
+      "tick": 26,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.7555901408195496,
+      "stockout_prob": 0.9937047362327576,
+      "predicted_stockout_qty": 141.3543243408203
+    },
+    {
+      "tick": 26,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.5499445199966431,
+      "stockout_prob": 0.9941036105155945,
+      "predicted_stockout_qty": 87.431884765625
+    },
+    {
+      "tick": 26,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.4162310063838959,
+      "stockout_prob": 0.992616593837738,
+      "predicted_stockout_qty": 122.08061218261719
+    },
+    {
+      "tick": 26,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9598699808120728,
+      "stockout_prob": 0.9787803888320923,
+      "predicted_stockout_qty": 59.99036407470703
+    },
+    {
+      "tick": 26,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9653664827346802,
+      "stockout_prob": 0.9729759097099304,
+      "predicted_stockout_qty": 24.216697692871094
+    },
+    {
+      "tick": 26,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9492442607879639,
+      "stockout_prob": 0.9870744943618774,
+      "predicted_stockout_qty": 146.8495635986328
+    },
+    {
+      "tick": 26,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.95404452085495,
+      "stockout_prob": 0.982130229473114,
+      "predicted_stockout_qty": 136.56808471679688
+    },
+    {
+      "tick": 27,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.2226923704147339,
+      "stockout_prob": 0.985202968120575,
+      "predicted_stockout_qty": 137.0046844482422
+    },
+    {
+      "tick": 27,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.22693325579166412,
+      "stockout_prob": 0.9863241314888,
+      "predicted_stockout_qty": 175.08714294433594
+    },
+    {
+      "tick": 27,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.19228345155715942,
+      "stockout_prob": 0.9831550121307373,
+      "predicted_stockout_qty": 157.14785766601562
+    },
+    {
+      "tick": 27,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.1307401806116104,
+      "stockout_prob": 0.971980094909668,
+      "predicted_stockout_qty": 128.5469970703125
+    },
+    {
+      "tick": 27,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.8049840331077576,
+      "stockout_prob": 0.9931718111038208,
+      "predicted_stockout_qty": 124.03387451171875
+    },
+    {
+      "tick": 27,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.7411131858825684,
+      "stockout_prob": 0.9938210844993591,
+      "predicted_stockout_qty": 106.40457916259766
+    },
+    {
+      "tick": 27,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.5773317217826843,
+      "stockout_prob": 0.9939574003219604,
+      "predicted_stockout_qty": 96.66702270507812
+    },
+    {
+      "tick": 27,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.4613760709762573,
+      "stockout_prob": 0.9933817386627197,
+      "predicted_stockout_qty": 114.39649200439453
+    },
+    {
+      "tick": 27,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9602264165878296,
+      "stockout_prob": 0.9784107208251953,
+      "predicted_stockout_qty": 60.26353454589844
+    },
+    {
+      "tick": 27,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.9674051403999329,
+      "stockout_prob": 0.9733061194419861,
+      "predicted_stockout_qty": 17.559980392456055
+    },
+    {
+      "tick": 27,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9493507146835327,
+      "stockout_prob": 0.9871167540550232,
+      "predicted_stockout_qty": 117.03614044189453
+    },
+    {
+      "tick": 27,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9542068243026733,
+      "stockout_prob": 0.9815670251846313,
+      "predicted_stockout_qty": 123.3099136352539
+    },
+    {
+      "tick": 28,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.22642862796783447,
+      "stockout_prob": 0.9853441119194031,
+      "predicted_stockout_qty": 152.7123260498047
+    },
+    {
+      "tick": 28,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.22707363963127136,
+      "stockout_prob": 0.9862281084060669,
+      "predicted_stockout_qty": 180.97552490234375
+    },
+    {
+      "tick": 28,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.1991296261548996,
+      "stockout_prob": 0.9836927056312561,
+      "predicted_stockout_qty": 175.7311553955078
+    },
+    {
+      "tick": 28,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.129269540309906,
+      "stockout_prob": 0.9701653122901917,
+      "predicted_stockout_qty": 120.38078308105469
+    },
+    {
+      "tick": 28,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.8055765628814697,
+      "stockout_prob": 0.9931114912033081,
+      "predicted_stockout_qty": 143.13299560546875
+    },
+    {
+      "tick": 28,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.7412582039833069,
+      "stockout_prob": 0.9936234354972839,
+      "predicted_stockout_qty": 103.2917251586914
+    },
+    {
+      "tick": 28,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.5623665452003479,
+      "stockout_prob": 0.993731677532196,
+      "predicted_stockout_qty": 88.00849914550781
+    },
+    {
+      "tick": 28,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.5277607440948486,
+      "stockout_prob": 0.9933752417564392,
+      "predicted_stockout_qty": 128.83981323242188
+    },
+    {
+      "tick": 28,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9591670036315918,
+      "stockout_prob": 0.9770289063453674,
+      "predicted_stockout_qty": 67.0871810913086
+    },
+    {
+      "tick": 28,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.966320812702179,
+      "stockout_prob": 0.9724934697151184,
+      "predicted_stockout_qty": 13.037873268127441
+    },
+    {
+      "tick": 28,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.9497575163841248,
+      "stockout_prob": 0.9855173230171204,
+      "predicted_stockout_qty": 155.0980987548828
+    },
+    {
+      "tick": 28,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9536147117614746,
+      "stockout_prob": 0.9813528656959534,
+      "predicted_stockout_qty": 116.39092254638672
+    },
+    {
+      "tick": 29,
+      "node_id": "T0-ALLOY-01",
+      "risk_score": 0.2194298356771469,
+      "stockout_prob": 0.984859049320221,
+      "predicted_stockout_qty": 144.2728729248047
+    },
+    {
+      "tick": 29,
+      "node_id": "T0-CELL-01",
+      "risk_score": 0.1616358608007431,
+      "stockout_prob": 0.9801405072212219,
+      "predicted_stockout_qty": 79.14237976074219
+    },
+    {
+      "tick": 29,
+      "node_id": "T0-GLASS-01",
+      "risk_score": 0.1963796466588974,
+      "stockout_prob": 0.9834095239639282,
+      "predicted_stockout_qty": 165.92111206054688
+    },
+    {
+      "tick": 29,
+      "node_id": "T0-SIL-01",
+      "risk_score": 0.12970583140850067,
+      "stockout_prob": 0.9699675440788269,
+      "predicted_stockout_qty": 126.0073471069336
+    },
+    {
+      "tick": 29,
+      "node_id": "T1-BATT-01",
+      "risk_score": 0.8370711207389832,
+      "stockout_prob": 0.9923050999641418,
+      "predicted_stockout_qty": 151.69163513183594
+    },
+    {
+      "tick": 29,
+      "node_id": "T1-CHSS-01",
+      "risk_score": 0.7483783960342407,
+      "stockout_prob": 0.993446409702301,
+      "predicted_stockout_qty": 134.74996948242188
+    },
+    {
+      "tick": 29,
+      "node_id": "T1-DISP-01",
+      "risk_score": 0.6258055567741394,
+      "stockout_prob": 0.9936095476150513,
+      "predicted_stockout_qty": 115.22400665283203
+    },
+    {
+      "tick": 29,
+      "node_id": "T1-PCBA-01",
+      "risk_score": 0.56298828125,
+      "stockout_prob": 0.9935376048088074,
+      "predicted_stockout_qty": 139.42767333984375
+    },
+    {
+      "tick": 29,
+      "node_id": "FAC-LAP-01",
+      "risk_score": 0.9559088945388794,
+      "stockout_prob": 0.9780578017234802,
+      "predicted_stockout_qty": 51.770328521728516
+    },
+    {
+      "tick": 29,
+      "node_id": "FAC-LAP-02",
+      "risk_score": 0.961408793926239,
+      "stockout_prob": 0.9769243597984314,
+      "predicted_stockout_qty": 33.07068634033203
+    },
+    {
+      "tick": 29,
+      "node_id": "WH-REG-01",
+      "risk_score": 0.948627769947052,
+      "stockout_prob": 0.9847921133041382,
+      "predicted_stockout_qty": 148.59329223632812
+    },
+    {
+      "tick": 29,
+      "node_id": "WH-REG-02",
+      "risk_score": 0.9539099931716919,
+      "stockout_prob": 0.9804501533508301,
+      "predicted_stockout_qty": 100.27835845947266
+    }
+  ],
+  "edge_predictions": [
+    {
+      "tick": 0,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.2757132649421692
+    },
+    {
+      "tick": 0,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.36987391114234924
+    },
+    {
+      "tick": 0,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.4021759331226349
+    },
+    {
+      "tick": 0,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.24550208449363708
+    },
+    {
+      "tick": 0,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.28788402676582336
+    },
+    {
+      "tick": 0,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.2667158842086792
+    },
+    {
+      "tick": 0,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.4485771954059601
+    },
+    {
+      "tick": 0,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.2281201183795929
+    },
+    {
+      "tick": 0,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.2518461346626282
+    },
+    {
+      "tick": 0,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.2539519965648651
+    },
+    {
+      "tick": 0,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.3967064917087555
+    },
+    {
+      "tick": 0,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.22874221205711365
+    },
+    {
+      "tick": 0,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.987269401550293
+    },
+    {
+      "tick": 0,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9865880608558655
+    },
+    {
+      "tick": 0,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9891778230667114
+    },
+    {
+      "tick": 0,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9832915663719177
+    },
+    {
+      "tick": 1,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.1849644035100937
+    },
+    {
+      "tick": 1,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.29633185267448425
+    },
+    {
+      "tick": 1,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.9002725481987
+    },
+    {
+      "tick": 1,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.1677861362695694
+    },
+    {
+      "tick": 1,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.2008216381072998
+    },
+    {
+      "tick": 1,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.2718915045261383
+    },
+    {
+      "tick": 1,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.3580360412597656
+    },
+    {
+      "tick": 1,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.16612714529037476
+    },
+    {
+      "tick": 1,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.22366271913051605
+    },
+    {
+      "tick": 1,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.2547224164009094
+    },
+    {
+      "tick": 1,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.3237915337085724
+    },
+    {
+      "tick": 1,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.17472073435783386
+    },
+    {
+      "tick": 1,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9967227578163147
+    },
+    {
+      "tick": 1,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9961989521980286
+    },
+    {
+      "tick": 1,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9978467226028442
+    },
+    {
+      "tick": 1,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9964401125907898
+    },
+    {
+      "tick": 2,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.13157546520233154
+    },
+    {
+      "tick": 2,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.44790196418762207
+    },
+    {
+      "tick": 2,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.9724776744842529
+    },
+    {
+      "tick": 2,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.10831238329410553
+    },
+    {
+      "tick": 2,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.19283853471279144
+    },
+    {
+      "tick": 2,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.2734301686286926
+    },
+    {
+      "tick": 2,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.28774043917655945
+    },
+    {
+      "tick": 2,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.16161426901817322
+    },
+    {
+      "tick": 2,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.22513805329799652
+    },
+    {
+      "tick": 2,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.2609262466430664
+    },
+    {
+      "tick": 2,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.24234820902347565
+    },
+    {
+      "tick": 2,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.15212874114513397
+    },
+    {
+      "tick": 2,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9990707039833069
+    },
+    {
+      "tick": 2,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9984277486801147
+    },
+    {
+      "tick": 2,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9993665814399719
+    },
+    {
+      "tick": 2,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9985499978065491
+    },
+    {
+      "tick": 3,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.10874488949775696
+    },
+    {
+      "tick": 3,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.4704771637916565
+    },
+    {
+      "tick": 3,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.9822248816490173
+    },
+    {
+      "tick": 3,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.062146130949258804
+    },
+    {
+      "tick": 3,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.20285379886627197
+    },
+    {
+      "tick": 3,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.3405162990093231
+    },
+    {
+      "tick": 3,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.798317015171051
+    },
+    {
+      "tick": 3,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.1560954600572586
+    },
+    {
+      "tick": 3,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.24022997915744781
+    },
+    {
+      "tick": 3,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.26655974984169006
+    },
+    {
+      "tick": 3,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.38490933179855347
+    },
+    {
+      "tick": 3,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.13856279850006104
+    },
+    {
+      "tick": 3,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9996127486228943
+    },
+    {
+      "tick": 3,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9990072846412659
+    },
+    {
+      "tick": 3,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9997161030769348
+    },
+    {
+      "tick": 3,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9991592168807983
+    },
+    {
+      "tick": 4,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.08761197328567505
+    },
+    {
+      "tick": 4,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.4734317362308502
+    },
+    {
+      "tick": 4,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.04323984310030937
+    },
+    {
+      "tick": 4,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.05493937060236931
+    },
+    {
+      "tick": 4,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.20404864847660065
+    },
+    {
+      "tick": 4,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.3424239456653595
+    },
+    {
+      "tick": 4,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.8104559183120728
+    },
+    {
+      "tick": 4,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.1513584554195404
+    },
+    {
+      "tick": 4,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.24812576174736023
+    },
+    {
+      "tick": 4,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.29367128014564514
+    },
+    {
+      "tick": 4,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.3491341471672058
+    },
+    {
+      "tick": 4,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.1924559324979782
+    },
+    {
+      "tick": 4,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.999803364276886
+    },
+    {
+      "tick": 4,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.999679684638977
+    },
+    {
+      "tick": 4,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9998210072517395
+    },
+    {
+      "tick": 4,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9997020363807678
+    },
+    {
+      "tick": 5,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.0744265466928482
+    },
+    {
+      "tick": 5,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.2566467821598053
+    },
+    {
+      "tick": 5,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.04695644602179527
+    },
+    {
+      "tick": 5,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.06417124718427658
+    },
+    {
+      "tick": 5,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.2135017216205597
+    },
+    {
+      "tick": 5,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.3531862199306488
+    },
+    {
+      "tick": 5,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.9158366918563843
+    },
+    {
+      "tick": 5,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.1771618127822876
+    },
+    {
+      "tick": 5,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.2551875114440918
+    },
+    {
+      "tick": 5,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.3103357255458832
+    },
+    {
+      "tick": 5,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.4497717320919037
+    },
+    {
+      "tick": 5,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.29985490441322327
+    },
+    {
+      "tick": 5,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9998739957809448
+    },
+    {
+      "tick": 5,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9998286962509155
+    },
+    {
+      "tick": 5,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9998859167098999
+    },
+    {
+      "tick": 5,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9998373985290527
+    },
+    {
+      "tick": 6,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.0537508986890316
+    },
+    {
+      "tick": 6,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.24778668582439423
+    },
+    {
+      "tick": 6,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.04979115352034569
+    },
+    {
+      "tick": 6,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.20568783581256866
+    },
+    {
+      "tick": 6,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.2263702005147934
+    },
+    {
+      "tick": 6,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.3275516629219055
+    },
+    {
+      "tick": 6,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.8545080423355103
+    },
+    {
+      "tick": 6,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.2800924777984619
+    },
+    {
+      "tick": 6,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.25699689984321594
+    },
+    {
+      "tick": 6,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.3258594870567322
+    },
+    {
+      "tick": 6,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.4756791293621063
+    },
+    {
+      "tick": 6,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.47386616468429565
+    },
+    {
+      "tick": 6,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9998881816864014
+    },
+    {
+      "tick": 6,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.999874472618103
+    },
+    {
+      "tick": 6,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9998857975006104
+    },
+    {
+      "tick": 6,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9998847246170044
+    },
+    {
+      "tick": 7,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.05550096556544304
+    },
+    {
+      "tick": 7,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.047481946647167206
+    },
+    {
+      "tick": 7,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.6926024556159973
+    },
+    {
+      "tick": 7,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.31027400493621826
+    },
+    {
+      "tick": 7,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.21692520380020142
+    },
+    {
+      "tick": 7,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.3502759635448456
+    },
+    {
+      "tick": 7,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.8303016424179077
+    },
+    {
+      "tick": 7,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.3538820147514343
+    },
+    {
+      "tick": 7,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.278849720954895
+    },
+    {
+      "tick": 7,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.3294665217399597
+    },
+    {
+      "tick": 7,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.4867613613605499
+    },
+    {
+      "tick": 7,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.7732049226760864
+    },
+    {
+      "tick": 7,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9998852014541626
+    },
+    {
+      "tick": 7,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9998828172683716
+    },
+    {
+      "tick": 7,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.999896764755249
+    },
+    {
+      "tick": 7,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9999018907546997
+    },
+    {
+      "tick": 8,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.05627059563994408
+    },
+    {
+      "tick": 8,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.04043303057551384
+    },
+    {
+      "tick": 8,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.7829177379608154
+    },
+    {
+      "tick": 8,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.5073590874671936
+    },
+    {
+      "tick": 8,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.21969051659107208
+    },
+    {
+      "tick": 8,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.3486175835132599
+    },
+    {
+      "tick": 8,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.8215833902359009
+    },
+    {
+      "tick": 8,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.35491496324539185
+    },
+    {
+      "tick": 8,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.2673795223236084
+    },
+    {
+      "tick": 8,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.26761797070503235
+    },
+    {
+      "tick": 8,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.25899726152420044
+    },
+    {
+      "tick": 8,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.2969990074634552
+    },
+    {
+      "tick": 8,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9998875856399536
+    },
+    {
+      "tick": 8,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9998925924301147
+    },
+    {
+      "tick": 8,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9944931268692017
+    },
+    {
+      "tick": 8,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9969789981842041
+    },
+    {
+      "tick": 9,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.053165461868047714
+    },
+    {
+      "tick": 9,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.037150051444768906
+    },
+    {
+      "tick": 9,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.8051270842552185
+    },
+    {
+      "tick": 9,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.5323783159255981
+    },
+    {
+      "tick": 9,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.21604251861572266
+    },
+    {
+      "tick": 9,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.33771657943725586
+    },
+    {
+      "tick": 9,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.8228705525398254
+    },
+    {
+      "tick": 9,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.38999223709106445
+    },
+    {
+      "tick": 9,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.27270886301994324
+    },
+    {
+      "tick": 9,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.26942554116249084
+    },
+    {
+      "tick": 9,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.25282925367355347
+    },
+    {
+      "tick": 9,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.2840190529823303
+    },
+    {
+      "tick": 9,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9998722076416016
+    },
+    {
+      "tick": 9,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9998995065689087
+    },
+    {
+      "tick": 9,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9937658309936523
+    },
+    {
+      "tick": 9,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9969095587730408
+    },
+    {
+      "tick": 10,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.0444820411503315
+    },
+    {
+      "tick": 10,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.1282116174697876
+    },
+    {
+      "tick": 10,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.7779926657676697
+    },
+    {
+      "tick": 10,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.6751290559768677
+    },
+    {
+      "tick": 10,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.26346421241760254
+    },
+    {
+      "tick": 10,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.32928788661956787
+    },
+    {
+      "tick": 10,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.8565846681594849
+    },
+    {
+      "tick": 10,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.4242987334728241
+    },
+    {
+      "tick": 10,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.2611231207847595
+    },
+    {
+      "tick": 10,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.2761945426464081
+    },
+    {
+      "tick": 10,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.2724337577819824
+    },
+    {
+      "tick": 10,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.236555814743042
+    },
+    {
+      "tick": 10,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9998770952224731
+    },
+    {
+      "tick": 10,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9999089241027832
+    },
+    {
+      "tick": 10,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9946178793907166
+    },
+    {
+      "tick": 10,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9967926144599915
+    },
+    {
+      "tick": 11,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.08228500932455063
+    },
+    {
+      "tick": 11,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.12995915114879608
+    },
+    {
+      "tick": 11,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.05900123715400696
+    },
+    {
+      "tick": 11,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.6942126750946045
+    },
+    {
+      "tick": 11,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.2976125180721283
+    },
+    {
+      "tick": 11,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.34377044439315796
+    },
+    {
+      "tick": 11,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.7039331197738647
+    },
+    {
+      "tick": 11,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.5333553552627563
+    },
+    {
+      "tick": 11,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.5219722986221313
+    },
+    {
+      "tick": 11,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.35171350836753845
+    },
+    {
+      "tick": 11,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.6284088492393494
+    },
+    {
+      "tick": 11,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.4569149613380432
+    },
+    {
+      "tick": 11,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9998443126678467
+    },
+    {
+      "tick": 11,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9999092817306519
+    },
+    {
+      "tick": 11,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9998981952667236
+    },
+    {
+      "tick": 11,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9999103546142578
+    },
+    {
+      "tick": 12,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.14908502995967865
+    },
+    {
+      "tick": 12,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.13196927309036255
+    },
+    {
+      "tick": 12,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.05999395251274109
+    },
+    {
+      "tick": 12,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.9867413640022278
+    },
+    {
+      "tick": 12,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.3425232470035553
+    },
+    {
+      "tick": 12,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.3379018008708954
+    },
+    {
+      "tick": 12,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.762365460395813
+    },
+    {
+      "tick": 12,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.716209888458252
+    },
+    {
+      "tick": 12,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.542745053768158
+    },
+    {
+      "tick": 12,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.32470181584358215
+    },
+    {
+      "tick": 12,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.6881539225578308
+    },
+    {
+      "tick": 12,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.6015939712524414
+    },
+    {
+      "tick": 12,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.999821126461029
+    },
+    {
+      "tick": 12,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9993571639060974
+    },
+    {
+      "tick": 12,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9998900890350342
+    },
+    {
+      "tick": 12,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9996154308319092
+    },
+    {
+      "tick": 13,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.2403317391872406
+    },
+    {
+      "tick": 13,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.14709994196891785
+    },
+    {
+      "tick": 13,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.058472778648138046
+    },
+    {
+      "tick": 13,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.9961726069450378
+    },
+    {
+      "tick": 13,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.3269917964935303
+    },
+    {
+      "tick": 13,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.32064342498779297
+    },
+    {
+      "tick": 13,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.8229289054870605
+    },
+    {
+      "tick": 13,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.9713209271430969
+    },
+    {
+      "tick": 13,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.644824743270874
+    },
+    {
+      "tick": 13,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.33209308981895447
+    },
+    {
+      "tick": 13,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.7256781458854675
+    },
+    {
+      "tick": 13,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.6747438907623291
+    },
+    {
+      "tick": 13,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9997243285179138
+    },
+    {
+      "tick": 13,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9988486766815186
+    },
+    {
+      "tick": 13,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9998997449874878
+    },
+    {
+      "tick": 13,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.99957674741745
+    },
+    {
+      "tick": 14,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.20162193477153778
+    },
+    {
+      "tick": 14,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.1574806421995163
+    },
+    {
+      "tick": 14,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.7268334031105042
+    },
+    {
+      "tick": 14,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.996881365776062
+    },
+    {
+      "tick": 14,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.3759976923465729
+    },
+    {
+      "tick": 14,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.3096792995929718
+    },
+    {
+      "tick": 14,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.9849998950958252
+    },
+    {
+      "tick": 14,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.9777246713638306
+    },
+    {
+      "tick": 14,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.45397302508354187
+    },
+    {
+      "tick": 14,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.41821005940437317
+    },
+    {
+      "tick": 14,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.6395902037620544
+    },
+    {
+      "tick": 14,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.684249997138977
+    },
+    {
+      "tick": 14,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9997283816337585
+    },
+    {
+      "tick": 14,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9983903169631958
+    },
+    {
+      "tick": 14,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9999063014984131
+    },
+    {
+      "tick": 14,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9995548129081726
+    },
+    {
+      "tick": 15,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.22534191608428955
+    },
+    {
+      "tick": 15,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.17715151607990265
+    },
+    {
+      "tick": 15,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.8011552095413208
+    },
+    {
+      "tick": 15,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.9927878975868225
+    },
+    {
+      "tick": 15,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.37125059962272644
+    },
+    {
+      "tick": 15,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.3257593810558319
+    },
+    {
+      "tick": 15,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.9954606890678406
+    },
+    {
+      "tick": 15,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.9811433553695679
+    },
+    {
+      "tick": 15,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.2781832218170166
+    },
+    {
+      "tick": 15,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.3197048604488373
+    },
+    {
+      "tick": 15,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.301135778427124
+    },
+    {
+      "tick": 15,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.3776061534881592
+    },
+    {
+      "tick": 15,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9997190833091736
+    },
+    {
+      "tick": 15,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9996823072433472
+    },
+    {
+      "tick": 15,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9951369166374207
+    },
+    {
+      "tick": 15,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9925448298454285
+    },
+    {
+      "tick": 16,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.15226158499717712
+    },
+    {
+      "tick": 16,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.18412871658802032
+    },
+    {
+      "tick": 16,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.8389116525650024
+    },
+    {
+      "tick": 16,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.1364673376083374
+    },
+    {
+      "tick": 16,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.2675686478614807
+    },
+    {
+      "tick": 16,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.33573994040489197
+    },
+    {
+      "tick": 16,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.9954853057861328
+    },
+    {
+      "tick": 16,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.27998819947242737
+    },
+    {
+      "tick": 16,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.25708383321762085
+    },
+    {
+      "tick": 16,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.32834920287132263
+    },
+    {
+      "tick": 16,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.3172711431980133
+    },
+    {
+      "tick": 16,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.22296756505966187
+    },
+    {
+      "tick": 16,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9996651411056519
+    },
+    {
+      "tick": 16,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9997056126594543
+    },
+    {
+      "tick": 16,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9942501783370972
+    },
+    {
+      "tick": 16,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.990209698677063
+    },
+    {
+      "tick": 17,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.17946450412273407
+    },
+    {
+      "tick": 17,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.17974261939525604
+    },
+    {
+      "tick": 17,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.7905221581459045
+    },
+    {
+      "tick": 17,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.127149760723114
+    },
+    {
+      "tick": 17,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.2500527501106262
+    },
+    {
+      "tick": 17,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.3142643868923187
+    },
+    {
+      "tick": 17,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.9835250377655029
+    },
+    {
+      "tick": 17,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.25807449221611023
+    },
+    {
+      "tick": 17,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.23386375606060028
+    },
+    {
+      "tick": 17,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.22805579006671906
+    },
+    {
+      "tick": 17,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.3537113666534424
+    },
+    {
+      "tick": 17,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.20708023011684418
+    },
+    {
+      "tick": 17,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9996426105499268
+    },
+    {
+      "tick": 17,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9996585845947266
+    },
+    {
+      "tick": 17,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9881401062011719
+    },
+    {
+      "tick": 17,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9797231554985046
+    },
+    {
+      "tick": 18,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.1719120740890503
+    },
+    {
+      "tick": 18,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.15978717803955078
+    },
+    {
+      "tick": 18,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.7804620265960693
+    },
+    {
+      "tick": 18,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.1258315145969391
+    },
+    {
+      "tick": 18,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.23863738775253296
+    },
+    {
+      "tick": 18,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.3265988230705261
+    },
+    {
+      "tick": 18,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.8536390066146851
+    },
+    {
+      "tick": 18,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.25340259075164795
+    },
+    {
+      "tick": 18,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.4056898355484009
+    },
+    {
+      "tick": 18,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.36282244324684143
+    },
+    {
+      "tick": 18,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.8600884079933167
+    },
+    {
+      "tick": 18,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.27087756991386414
+    },
+    {
+      "tick": 18,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9995682835578918
+    },
+    {
+      "tick": 18,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9996634721755981
+    },
+    {
+      "tick": 18,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9997040629386902
+    },
+    {
+      "tick": 18,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9997568726539612
+    },
+    {
+      "tick": 19,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.07306262105703354
+    },
+    {
+      "tick": 19,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.13894887268543243
+    },
+    {
+      "tick": 19,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.11322400718927383
+    },
+    {
+      "tick": 19,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.8317694067955017
+    },
+    {
+      "tick": 19,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.35089361667633057
+    },
+    {
+      "tick": 19,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.2891154885292053
+    },
+    {
+      "tick": 19,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.15883716940879822
+    },
+    {
+      "tick": 19,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.8767102956771851
+    },
+    {
+      "tick": 19,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.5838115811347961
+    },
+    {
+      "tick": 19,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.3240995705127716
+    },
+    {
+      "tick": 19,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.24310177564620972
+    },
+    {
+      "tick": 19,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.9221311807632446
+    },
+    {
+      "tick": 19,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9994947910308838
+    },
+    {
+      "tick": 19,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9995405673980713
+    },
+    {
+      "tick": 19,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9996798038482666
+    },
+    {
+      "tick": 19,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9996912479400635
+    },
+    {
+      "tick": 20,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.07731162011623383
+    },
+    {
+      "tick": 20,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.1439671814441681
+    },
+    {
+      "tick": 20,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.11171883344650269
+    },
+    {
+      "tick": 20,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.8387735486030579
+    },
+    {
+      "tick": 20,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.1932598501443863
+    },
+    {
+      "tick": 20,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.20168757438659668
+    },
+    {
+      "tick": 20,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.14605587720870972
+    },
+    {
+      "tick": 20,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.3280937969684601
+    },
+    {
+      "tick": 20,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.5670372843742371
+    },
+    {
+      "tick": 20,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.3363714814186096
+    },
+    {
+      "tick": 20,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.24784542620182037
+    },
+    {
+      "tick": 20,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.9060457348823547
+    },
+    {
+      "tick": 20,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9659107327461243
+    },
+    {
+      "tick": 20,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9424456357955933
+    },
+    {
+      "tick": 20,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9996265172958374
+    },
+    {
+      "tick": 20,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9996445178985596
+    },
+    {
+      "tick": 21,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.18347002565860748
+    },
+    {
+      "tick": 21,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.14104892313480377
+    },
+    {
+      "tick": 21,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.08025762438774109
+    },
+    {
+      "tick": 21,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.07758825272321701
+    },
+    {
+      "tick": 21,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.2038634568452835
+    },
+    {
+      "tick": 21,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.2031807005405426
+    },
+    {
+      "tick": 21,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.1121465414762497
+    },
+    {
+      "tick": 21,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.3355044424533844
+    },
+    {
+      "tick": 21,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.6367861032485962
+    },
+    {
+      "tick": 21,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.31792977452278137
+    },
+    {
+      "tick": 21,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.17195899784564972
+    },
+    {
+      "tick": 21,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.8929101824760437
+    },
+    {
+      "tick": 21,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9595929384231567
+    },
+    {
+      "tick": 21,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9401904940605164
+    },
+    {
+      "tick": 21,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9994844198226929
+    },
+    {
+      "tick": 21,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9995672106742859
+    },
+    {
+      "tick": 22,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.8638603091239929
+    },
+    {
+      "tick": 22,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.08254056423902512
+    },
+    {
+      "tick": 22,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.09993463009595871
+    },
+    {
+      "tick": 22,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.08121587336063385
+    },
+    {
+      "tick": 22,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.1910749226808548
+    },
+    {
+      "tick": 22,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.09255173057317734
+    },
+    {
+      "tick": 22,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.12484709173440933
+    },
+    {
+      "tick": 22,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.3672197461128235
+    },
+    {
+      "tick": 22,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.5584355592727661
+    },
+    {
+      "tick": 22,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.09200911223888397
+    },
+    {
+      "tick": 22,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.18186795711517334
+    },
+    {
+      "tick": 22,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.8860854506492615
+    },
+    {
+      "tick": 22,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9577608704566956
+    },
+    {
+      "tick": 22,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9417911171913147
+    },
+    {
+      "tick": 22,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9994025230407715
+    },
+    {
+      "tick": 22,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9995321035385132
+    },
+    {
+      "tick": 23,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.8744675517082214
+    },
+    {
+      "tick": 23,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.08520334959030151
+    },
+    {
+      "tick": 23,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.10578236728906631
+    },
+    {
+      "tick": 23,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.08083809167146683
+    },
+    {
+      "tick": 23,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.28117743134498596
+    },
+    {
+      "tick": 23,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.0940767452120781
+    },
+    {
+      "tick": 23,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.15912796556949615
+    },
+    {
+      "tick": 23,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.8550871014595032
+    },
+    {
+      "tick": 23,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.45982399582862854
+    },
+    {
+      "tick": 23,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.09428198635578156
+    },
+    {
+      "tick": 23,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.18117202818393707
+    },
+    {
+      "tick": 23,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.9100538492202759
+    },
+    {
+      "tick": 23,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9994142055511475
+    },
+    {
+      "tick": 23,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9995383024215698
+    },
+    {
+      "tick": 23,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9994410872459412
+    },
+    {
+      "tick": 23,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.99957674741745
+    },
+    {
+      "tick": 24,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.2310856282711029
+    },
+    {
+      "tick": 24,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.09408910572528839
+    },
+    {
+      "tick": 24,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.8279553055763245
+    },
+    {
+      "tick": 24,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.7469330430030823
+    },
+    {
+      "tick": 24,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.2536064684391022
+    },
+    {
+      "tick": 24,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.10500986129045486
+    },
+    {
+      "tick": 24,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.7793031930923462
+    },
+    {
+      "tick": 24,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.8705887794494629
+    },
+    {
+      "tick": 24,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.4411599636077881
+    },
+    {
+      "tick": 24,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.1760035902261734
+    },
+    {
+      "tick": 24,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.8055176734924316
+    },
+    {
+      "tick": 24,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.921459436416626
+    },
+    {
+      "tick": 24,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9994171857833862
+    },
+    {
+      "tick": 24,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9995194673538208
+    },
+    {
+      "tick": 24,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9994884729385376
+    },
+    {
+      "tick": 24,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9995208978652954
+    },
+    {
+      "tick": 25,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.26355963945388794
+    },
+    {
+      "tick": 25,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.08539421111345291
+    },
+    {
+      "tick": 25,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.7932056188583374
+    },
+    {
+      "tick": 25,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.7960707545280457
+    },
+    {
+      "tick": 25,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.1840714067220688
+    },
+    {
+      "tick": 25,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.09376666694879532
+    },
+    {
+      "tick": 25,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.20885205268859863
+    },
+    {
+      "tick": 25,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.35923823714256287
+    },
+    {
+      "tick": 25,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.3730069398880005
+    },
+    {
+      "tick": 25,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.15027612447738647
+    },
+    {
+      "tick": 25,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.7952749133110046
+    },
+    {
+      "tick": 25,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.9129456281661987
+    },
+    {
+      "tick": 25,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9460572004318237
+    },
+    {
+      "tick": 25,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9547983407974243
+    },
+    {
+      "tick": 25,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9993966817855835
+    },
+    {
+      "tick": 25,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9994997978210449
+    },
+    {
+      "tick": 26,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.2926589548587799
+    },
+    {
+      "tick": 26,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.09128937870264053
+    },
+    {
+      "tick": 26,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.8005264401435852
+    },
+    {
+      "tick": 26,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.8372114300727844
+    },
+    {
+      "tick": 26,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.17027831077575684
+    },
+    {
+      "tick": 26,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.13840749859809875
+    },
+    {
+      "tick": 26,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.20647531747817993
+    },
+    {
+      "tick": 26,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.36769813299179077
+    },
+    {
+      "tick": 26,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.4853377044200897
+    },
+    {
+      "tick": 26,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.17017754912376404
+    },
+    {
+      "tick": 26,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.8760599493980408
+    },
+    {
+      "tick": 26,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.9133056998252869
+    },
+    {
+      "tick": 26,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.942399799823761
+    },
+    {
+      "tick": 26,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.950928270816803
+    },
+    {
+      "tick": 26,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9993265867233276
+    },
+    {
+      "tick": 26,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9995424747467041
+    },
+    {
+      "tick": 27,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.22009509801864624
+    },
+    {
+      "tick": 27,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.09576582163572311
+    },
+    {
+      "tick": 27,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.7558437585830688
+    },
+    {
+      "tick": 27,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.8405455946922302
+    },
+    {
+      "tick": 27,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.18094812333583832
+    },
+    {
+      "tick": 27,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.19312375783920288
+    },
+    {
+      "tick": 27,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.19963376224040985
+    },
+    {
+      "tick": 27,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.3503285348415375
+    },
+    {
+      "tick": 27,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.22899742424488068
+    },
+    {
+      "tick": 27,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.10596174001693726
+    },
+    {
+      "tick": 27,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.26639506220817566
+    },
+    {
+      "tick": 27,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.318668007850647
+    },
+    {
+      "tick": 27,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9434226751327515
+    },
+    {
+      "tick": 27,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9519554972648621
+    },
+    {
+      "tick": 27,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.967985212802887
+    },
+    {
+      "tick": 27,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9761731028556824
+    },
+    {
+      "tick": 28,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.2862500846385956
+    },
+    {
+      "tick": 28,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.13904495537281036
+    },
+    {
+      "tick": 28,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.8195306062698364
+    },
+    {
+      "tick": 28,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.8293119072914124
+    },
+    {
+      "tick": 28,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.35947731137275696
+    },
+    {
+      "tick": 28,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.7904101014137268
+    },
+    {
+      "tick": 28,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.7162165641784668
+    },
+    {
+      "tick": 28,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.8906572461128235
+    },
+    {
+      "tick": 28,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.218855619430542
+    },
+    {
+      "tick": 28,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.17183107137680054
+    },
+    {
+      "tick": 28,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.2622188627719879
+    },
+    {
+      "tick": 28,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.33650848269462585
+    },
+    {
+      "tick": 28,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9992685914039612
+    },
+    {
+      "tick": 28,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9995135068893433
+    },
+    {
+      "tick": 28,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9699857234954834
+    },
+    {
+      "tick": 28,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.9753343462944031
+    },
+    {
+      "tick": 29,
+      "edge_id": "E-0001",
+      "edge_risk_score": 0.16077229380607605
+    },
+    {
+      "tick": 29,
+      "edge_id": "E-0002",
+      "edge_risk_score": 0.15479804575443268
+    },
+    {
+      "tick": 29,
+      "edge_id": "E-0003",
+      "edge_risk_score": 0.058740969747304916
+    },
+    {
+      "tick": 29,
+      "edge_id": "E-0004",
+      "edge_risk_score": 0.8325865268707275
+    },
+    {
+      "tick": 29,
+      "edge_id": "E-0005",
+      "edge_risk_score": 0.3991169333457947
+    },
+    {
+      "tick": 29,
+      "edge_id": "E-0006",
+      "edge_risk_score": 0.677223265171051
+    },
+    {
+      "tick": 29,
+      "edge_id": "E-0007",
+      "edge_risk_score": 0.7820804119110107
+    },
+    {
+      "tick": 29,
+      "edge_id": "E-0008",
+      "edge_risk_score": 0.8913546204566956
+    },
+    {
+      "tick": 29,
+      "edge_id": "E-0009",
+      "edge_risk_score": 0.23516593873500824
+    },
+    {
+      "tick": 29,
+      "edge_id": "E-0010",
+      "edge_risk_score": 0.28238847851753235
+    },
+    {
+      "tick": 29,
+      "edge_id": "E-0011",
+      "edge_risk_score": 0.27318114042282104
+    },
+    {
+      "tick": 29,
+      "edge_id": "E-0012",
+      "edge_risk_score": 0.3352113664150238
+    },
+    {
+      "tick": 29,
+      "edge_id": "E-0013",
+      "edge_risk_score": 0.9989763498306274
+    },
+    {
+      "tick": 29,
+      "edge_id": "E-0014",
+      "edge_risk_score": 0.9993665814399719
+    },
+    {
+      "tick": 29,
+      "edge_id": "E-0015",
+      "edge_risk_score": 0.9654344916343689
+    },
+    {
+      "tick": 29,
+      "edge_id": "E-0016",
+      "edge_risk_score": 0.974223256111145
+    }
+  ]
+}

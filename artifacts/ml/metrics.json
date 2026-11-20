@@ -1,0 +1,280 @@
+{
+  "model_name": "SupplyGuard Temporal Edge-Aware GNN",
+  "model_backend": "native_torch_index_add_fallback",
+  "trained_at_utc": "2026-11-19T21:26:20.376311+00:00",
+  "source_database_sha256": "ef4213e3ad99ed7e25654edb77b565db9506b86ae1de0d6823ded0f2c7b132c5",
+  "source_counts": {
+    "nodes": 12,
+    "edges": 16,
+    "components": 5,
+    "inventory_snapshots": 1800,
+    "supply_messages": 497,
+    "ticks": 30
+  },
+  "forecast_horizon_ticks": 3,
+  "lookback_ticks": 3,
+  "best_epoch": 4,
+  "epochs_completed": 34,
+  "best_validation_loss": 1.2167095343271892,
+  "quantity_residual_scale_selected_on_validation": 0.1,
+  "quantity_residual_scale_validation_mae": {
+    "0.0": 15.583888371785475,
+    "0.05": 15.572264852762581,
+    "0.1": 15.563265182373705,
+    "0.2": 15.566968790546225,
+    "0.35": 15.643646248938454,
+    "0.5": 15.749254046927092,
+    "0.75": 16.074703652609053,
+    "1.0": 16.56586040749053
+  },
+  "device": "cpu",
+  "temporal_split": {
+    "train": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "validation": [
+      17,
+      18,
+      19
+    ],
+    "test": [
+      22,
+      23,
+      24,
+      25,
+      26
+    ]
+  },
+  "train": {
+    "anchors": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14
+    ],
+    "mean_loss": 0.8133734345436097,
+    "node_risk": {
+      "records": 180,
+      "positive_rate": 0.5222222222222223,
+      "roc_auc": 0.9245423057892133,
+      "brier_score": 0.10010454816129649,
+      "accuracy_at_0_5": 0.8722222222222222,
+      "precision_at_0_5": 0.9382716049382716,
+      "recall_at_0_5": 0.8085106382978723,
+      "f1_at_0_5": 0.8685714285714285,
+      "confusion_matrix": {
+        "tn": 81,
+        "fp": 5,
+        "fn": 18,
+        "tp": 76
+      }
+    },
+    "stockout_probability": {
+      "records": 180,
+      "positive_rate": 0.6,
+      "roc_auc": 0.9907407407407407,
+      "brier_score": 0.03542724979735653,
+      "accuracy_at_0_5": 0.9555555555555556,
+      "precision_at_0_5": 0.9807692307692307,
+      "recall_at_0_5": 0.9444444444444444,
+      "f1_at_0_5": 0.9622641509433962,
+      "confusion_matrix": {
+        "tn": 70,
+        "fp": 2,
+        "fn": 6,
+        "tp": 102
+      }
+    },
+    "predicted_stockout_qty": {
+      "records": 180,
+      "mae": 5.86767291829973,
+      "rmse": 10.492336696457333,
+      "actual_mean": 41.6381110360225,
+      "predicted_mean": 42.61314436125103,
+      "physics_baseline_mae": 5.875999963449107,
+      "physics_baseline_mean": 42.590777687728405
+    },
+    "edge_risk": {
+      "records": 240,
+      "positive_rate": 0.5291666666666667,
+      "roc_auc": 0.9254407358372239,
+      "brier_score": 0.11338376437484542,
+      "accuracy_at_0_5": 0.8291666666666667,
+      "precision_at_0_5": 0.9215686274509803,
+      "recall_at_0_5": 0.7401574803149606,
+      "f1_at_0_5": 0.8209606986899565,
+      "confusion_matrix": {
+        "tn": 105,
+        "fp": 8,
+        "fn": 33,
+        "tp": 94
+      }
+    }
+  },
+  "validation": {
+    "anchors": [
+      17,
+      18,
+      19
+    ],
+    "mean_loss": 1.2165691057840984,
+    "node_risk": {
+      "records": 36,
+      "positive_rate": 0.6666666666666666,
+      "roc_auc": 0.8645833333333334,
+      "brier_score": 0.16355038282553372,
+      "accuracy_at_0_5": 0.6944444444444444,
+      "precision_at_0_5": 0.8421052631578947,
+      "recall_at_0_5": 0.6666666666666666,
+      "f1_at_0_5": 0.744186046511628,
+      "confusion_matrix": {
+        "tn": 9,
+        "fp": 3,
+        "fn": 8,
+        "tp": 16
+      }
+    },
+    "stockout_probability": {
+      "records": 36,
+      "positive_rate": 1.0,
+      "roc_auc": null,
+      "brier_score": 0.0006123160048993665,
+      "accuracy_at_0_5": 1.0,
+      "precision_at_0_5": 1.0,
+      "recall_at_0_5": 1.0,
+      "f1_at_0_5": 1.0,
+      "confusion_matrix": {
+        "tn": 0,
+        "fp": 0,
+        "fn": 0,
+        "tp": 36
+      }
+    },
+    "predicted_stockout_qty": {
+      "records": 36,
+      "mae": 15.563265217675102,
+      "rmse": 24.76217413722004,
+      "actual_mean": 112.46694458855524,
+      "predicted_mean": 114.18928999370999,
+      "physics_baseline_mae": 15.583888371785482,
+      "physics_baseline_mean": 114.15083355373807
+    },
+    "edge_risk": {
+      "records": 48,
+      "positive_rate": 0.7708333333333334,
+      "roc_auc": 0.6904176904176904,
+      "brier_score": 0.2651512143392032,
+      "accuracy_at_0_5": 0.5833333333333334,
+      "precision_at_0_5": 0.9047619047619048,
+      "recall_at_0_5": 0.5135135135135135,
+      "f1_at_0_5": 0.6551724137931034,
+      "confusion_matrix": {
+        "tn": 9,
+        "fp": 2,
+        "fn": 18,
+        "tp": 19
+      }
+    }
+  },
+  "test": {
+    "anchors": [
+      22,
+      23,
+      24,
+      25,
+      26
+    ],
+    "mean_loss": 1.3581584453582765,
+    "node_risk": {
+      "records": 60,
+      "positive_rate": 0.43333333333333335,
+      "roc_auc": 0.8868778280542986,
+      "brier_score": 0.1945916769102671,
+      "accuracy_at_0_5": 0.65,
+      "precision_at_0_5": 0.5714285714285714,
+      "recall_at_0_5": 0.7692307692307693,
+      "f1_at_0_5": 0.6557377049180327,
+      "confusion_matrix": {
+        "tn": 19,
+        "fp": 15,
+        "fn": 6,
+        "tp": 20
+      }
+    },
+    "stockout_probability": {
+      "records": 60,
+      "positive_rate": 1.0,
+      "roc_auc": null,
+      "brier_score": 0.00025422089411613057,
+      "accuracy_at_0_5": 1.0,
+      "precision_at_0_5": 1.0,
+      "recall_at_0_5": 1.0,
+      "f1_at_0_5": 1.0,
+      "confusion_matrix": {
+        "tn": 0,
+        "fp": 0,
+        "fn": 0,
+        "tp": 60
+      }
+    },
+    "predicted_stockout_qty": {
+      "records": 60,
+      "mae": 12.362362162272136,
+      "rmse": 17.99304457912463,
+      "actual_mean": 119.48083264033,
+      "predicted_mean": 121.19799006779989,
+      "physics_baseline_mae": 12.405500316619873,
+      "physics_baseline_mean": 121.11333287556967
+    },
+    "edge_risk": {
+      "records": 80,
+      "positive_rate": 0.65,
+      "roc_auc": 0.6723901098901099,
+      "brier_score": 0.2833157270833115,
+      "accuracy_at_0_5": 0.6,
+      "precision_at_0_5": 0.75,
+      "recall_at_0_5": 0.5769230769230769,
+      "f1_at_0_5": 0.6521739130434783,
+      "confusion_matrix": {
+        "tn": 18,
+        "fp": 10,
+        "fn": 22,
+        "tp": 30
+      }
+    }
+  },
+  "limitations": [
+    "The bundled source contains 30 synthetic simulation ticks, 12 nodes, and 16 directed edges.",
+    "The test partition is a small chronological holdout; metrics are exploratory, not production guarantees.",
+    "The source has static final compromise flags rather than a per-tick compromise history; those flags are not used as historical input features.",
+    "Stockout probability means at least one positive stockout_qty record for the node across the next horizon ticks.",
+    "Predicted stockout quantity is the cumulative shortfall across all five item codes over the next horizon ticks.",
+    "The quantity head learns a graph-informed log-space residual over a transparent demand/on-hand/incoming physics baseline; its residual scale is selected on validation only."
+  ],
+  "training_seconds": 2.837
+}
